@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Reinaldo Alvin Santoso</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1><span class="highlight">Rei</span> Portofolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#pendidikan">Pendidikan</a></li>
+                <li><a href="#keahlian">Keahlian</a></li>
+                <li><a href="#proyek">Proyek</a></li>
+            </ul>
+        </nav>
+    </nav>
+    
+    <main>
+        <header>
+            <div class="profile">
+                <img src="images/Profile.jpg" alt="Foto Reinaldo Alvin Santoso">
+                <div>
+                    <h1>Reinaldo Alvin Santoso</h1>
+                    <p>Web Developer</p>
+                    <a href="https://api.whatsapp.com/send/?phone=6285161426593&text=Halo+Kak%2C+Aku+%5Bnama%5D%2C+mau+buat+website+dengan+fitur+%5Bsebutkan+fitur+yang+diinginkan%5D%2C+kira-kira+harganya+berapa+ya%3F&type=phone_number&app_absent=0" target="_blank" class="btn">Hubungi Saya</a>
+                </div>
+            </div>
+        </header>
+
+        <section class="tentang-saya" id="tentang">
+            <h2>Tentang Saya</h2>
+            <p>Halo! Saya <strong>Reinaldo Alvin Santoso</strong>, seorang <strong>Web Developer</strong> yang memiliki keahlian dalam <strong>HTML, CSS, JavaScript, PHP, dan SQL</strong>. 
+                Saya berpengalaman dalam membangun website yang <strong>modern, responsif, dan fungsional</strong> dengan fokus pada kualitas kode dan pengalaman pengguna.
+                Saya juga memiliki pemahaman dasar dalam pengembangan backend dan database, yang memungkinkan saya untuk membuat aplikasi web yang <strong>terintegrasi dan efisien</strong>.
+                Saya selalu bersemangat untuk mengembangkan kemampuan saya dan mengikuti perkembangan teknologi terbaru di dunia web development.</p>
+        </section>
+
+        <section class="pendidikan" id="pendidikan">
+            <h2>Pendidikan</h2>
+            <div class="pendidikan-container">
+                <a href="https://id.wikipedia.org/wiki/SMA_Katolik_Kolese_Santo_Yusup_Malang" target="_blank" class="pendidikan-panel">
+                    <img src="images/SMA.jpg" alt="SMAK Kolese Santo Yusup Malang">
+                    <strong>SMAK Kolese Santo Yusup Malang</strong>
+                    <p>(2023-2026)</p>
+                </a>
+                <a href="https://kosayu2.sch.id/" target="_blank" class="pendidikan-panel">
+                    <img src="images/SMP.jpeg" alt="SMPK Kolese Santo Yusup 2 Malang">
+                    <strong>SMPK Kolese Santo Yusup 2 Malang</strong>
+                    <p>(2020-2023)</p>
+                </a>
+                <a href="https://data-sekolah.zekolah.id/sekolah/sd-katolik-fransiskus-xaverius-120829" target="_blank" class="pendidikan-panel">
+                    <img src="images/SD.jpg" alt="SDK Santo Fransiskus Xaverius Situbondo">
+                    <strong>SDK Santo Fransiskus Xaverius Situbondo</strong>
+                    <p>(2014-2020)</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="skill" id="keahlian">
+            <h2>Keahlian</h2>
+            <div class="grid">
+                <div class="panel">
+                    <img src="images/HTML.png" alt="HTML Logo" class="skill-logo">
+                    <p><b>HTML</b></p>
+                </div>
+                <div class="panel">
+                    <img src="images/CSS.png" alt="CSS Logo" class="skill-logo">
+                    <p><b>CSS</b></p>
+                </div>
+                <div class="panel">
+                    <img src="images/JS.png" alt="JavaScript Logo" class="skill-logo">
+                    <p><b>JavaScript</b></p>
+                </div>
+                <div class="panel">
+                    <img src="images/PHP.png" alt="PHP Logo" class="skill-logo">
+                    <p><b>PHP</b></p>
+                </div>
+                <div class="panel">
+                    <img src="images/SQL.png" alt="SQL Logo" class="skill-logo">
+                    <p><b>SQL</b></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="skill" id="proyek">
+            <h2>Proyek</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="projects/proyek1.png" alt="Proyek 1">
+                    <div>
+                        <h3>Website Sistem Kasir</h3>
+                        <p>Sistem kasir yang dirancang untuk menghitung total produk, penjualan, dan pendapatan UMKM dengan fitur stok dan laporan periode.</p>
+                        <center><a href="proyek1.html" class="btn">Lihat Detail</a></center>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="projects/Puzzle-home.png" alt="Proyek 2">
+                    <div>
+                        <h3>Puzzle Game Coding</h3>
+                        <p>Game yang dirancang untuk mempelajari bahasa Python dengan beberapa level.</p>
+                        <center><a href="proyek2.html" class="btn">Lihat Detail</a></center>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Copyright © <span id="year"></span> Reinaldo Alvin Santoso.</p>
+    </footer>
+    <script>
+        // Ambil tahun saat ini
+        const currentYear = new Date().getFullYear();
+        // Masukkan ke elemen dengan id 'year'
+        document.getElementById("year").textContent = currentYear;
+    </script>
+</body>
+</html>
