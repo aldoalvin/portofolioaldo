@@ -658,13 +658,15 @@ body {
             color: var(--accent);
         }
 
-       .modal-controls {
-          margin-top: 20px;
+      .modal-controls {
+          position: relative;
+          z-index: 2; /* lebih tinggi dari gambar */
           display: flex;
           justify-content: center;
           gap: 10px;
-          flex-wrap: wrap; /* Agar tombol pindah ke bawah jika sempit */
+          margin-top: 20px;
         }
+
         
         
         .modal-button {
