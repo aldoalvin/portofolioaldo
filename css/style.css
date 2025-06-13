@@ -669,7 +669,7 @@ body {
         
         .modal-button {
           width: auto; /* Agar ukuran hanya mengikuti isi tombol */
-          min-width: 40px; /* Boleh atur sesuai kebutuhan */
+          min-width: 80px; /* Boleh atur sesuai kebutuhan */
           padding: 8px 12px;
           font-size: 16px;
           background-color: #ffae00;
