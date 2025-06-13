@@ -658,24 +658,30 @@ body {
             color: var(--accent);
         }
 
-        .modal-controls {
-  margin-top: 20px; /* Jarak dari gambar */
-  display: flex;
-  justify-content: center;
-  gap: 10px; /* Jarak antar tombol */
-}
-
-.modal-button {
-  padding: 10px 15px;
-  font-size: 18px;
-  background-color: #ffae00;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  color: white;
-}
-
-.modal-button:hover {
-  background-color: #e69900;
-}
+       .modal-controls {
+          margin-top: 20px;
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          flex-wrap: wrap; /* Agar tombol pindah ke bawah jika sempit */
+        }
+        
+        
+        .modal-button {
+          width: auto; /* Agar ukuran hanya mengikuti isi tombol */
+          min-width: 40px; /* Boleh atur sesuai kebutuhan */
+          padding: 8px 12px;
+          font-size: 16px;
+          background-color: #ffae00;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          color: white;
+          flex-shrink: 0; /* Tombol tidak mengecil meski ruang sempit */
+        }
+        
+        
+        .modal-button:hover {
+          background-color: #e69900;
+        }
 
