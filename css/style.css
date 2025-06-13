@@ -419,11 +419,12 @@ header {
 }
 
 .modal-caption {
-    margin: 15px auto;
-    text-align: center;
-    color: var(--white);
-    font-size: 1.1rem;
-    max-width: 80%;
+    position: relative; /* Tambahkan ini */
+    z-index: 1001; /* Lebih tinggi dari tombol */
+    margin-top: 20px; /* Jarak dari gambar */
+    background-color: rgba(0,0,0,0.7); /* Latar belakang semi-transparan */
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
 .modal-close {
@@ -442,12 +443,11 @@ header {
 }
 
 .modal-controls {
-    position: absolute;
+    position: fixed;
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    display: flex;
-    gap: 15px;
+    z-index: 1000; /* Pastikan lebih rendah dari caption */
 }
 
 .modal-button {
