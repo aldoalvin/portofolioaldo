@@ -659,11 +659,14 @@ body {
         }
 
       .modal-controls {
-          margin-top: 20px;
+          position: relative;
+          z-index: 2; /* lebih tinggi dari gambar */
           display: flex;
           justify-content: center;
           gap: 10px;
+          margin-top: 20px;
         }
+
 
         
         
