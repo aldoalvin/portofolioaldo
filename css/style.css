@@ -659,12 +659,10 @@ body {
         }
 
       .modal-controls {
-          position: relative;
-          z-index: 2; /* lebih tinggi dari gambar */
+          margin-top: 20px;
           display: flex;
           justify-content: center;
           gap: 10px;
-          margin-top: 20px;
         }
 
         
@@ -687,3 +685,14 @@ body {
           background-color: #e69900;
         }
 
+
+        #modalImg {
+          max-width: 90%;
+          max-height: 70vh;
+          transition: transform 0.3s ease;
+          display: block;
+          margin: 0 auto;
+          z-index: 1;
+          position: relative;
+        }
+        
