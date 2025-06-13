@@ -659,27 +659,23 @@ body {
         }
 
         .modal-controls {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 15px;
-        }
+  margin-top: 20px; /* Jarak dari gambar */
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Jarak antar tombol */
+}
 
-        .modal-button {
-            background-color: var(--accent);
-            border: none;
-            color: var(--white);
-            padding: 10px 50px;
-            font-size: 18px;
-            border-radius: 8px;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(245, 166, 35, 0.6);
-            transition: background-color 0.3s ease;
-            user-select: none;
-        }
+.modal-button {
+  padding: 10px 15px;
+  font-size: 18px;
+  background-color: #ffae00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
 
-        .modal-button:hover {
-            background-color: #d17e00;
-        }
+.modal-button:hover {
+  background-color: #e69900;
+}
+
