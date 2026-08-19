@@ -251,7 +251,7 @@ header {
 
 .pendidikan-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Default 4 kolom sejajar di desktop */
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
     margin-top: 2.5rem;
 }
@@ -418,7 +418,7 @@ header {
 
 .sertifikat-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 280px)); /* Mengunci ukuran kartu */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 280px));
     gap: 1.5rem;
     margin-top: 2.5rem;
 }
@@ -442,7 +442,7 @@ header {
     height: 160px;
     object-fit: cover;
     border-bottom: 2px solid var(--primary);
-    cursor: pointer; /* Memberikan indikator bisa diklik */
+    cursor: pointer;
     transition: transform 0.3s ease;
 }
 
@@ -519,7 +519,7 @@ main .preview-img:hover {
     transform: scale(1.05);
 }
 
-/* Modal Styles - Diperbaiki menggunakan Flexbox untuk penataan persis di tengah */
+/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
@@ -531,8 +531,6 @@ main .preview-img:hover {
     overflow: auto;
     background-color: rgba(0,0,0,0.8);
     transition: opacity 0.3s ease;
-    
-    /* Menggunakan Flexbox untuk memosisikan modal presisi di tengah layar */
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -545,7 +543,7 @@ main .preview-img:hover {
 }
 
 .modal-content {
-    margin: 0; /* Margin atas 80px dihilangkan agar gambar naik ke tengah */
+    margin: 0;
     display: block;
     max-width: 80%;
     max-height: 80vh;
@@ -607,28 +605,52 @@ main .preview-img:hover {
 /* Responsive Design */
 @media (max-width: 1024px) {
     .pendidikan-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 kolom di Layar Sedang / Tablet */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
-        padding: 1.2rem;
-        height: 5rem;
+        padding: 0.8rem 1rem;
+        height: auto;
+        gap: 0.6rem;
+    }
+
+    .navbar nav {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .navbar nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .navbar nav {
+        scrollbar-width: none;
     }
     
     .navbar nav ul {
-        margin-top: 0.25rem;
+        margin-top: 0;
+        gap: 1rem;
+        justify-content: center; /* Mengatur item menu tepat di tengah */
+        padding: 0;
+        width: 100%;
+    }
+
+    .navbar nav a {
+        font-size: 0.88rem;
     }
     
     header {
-        padding: 80px 5% 40px;
+        padding: 110px 5% 40px;
         border-radius: 0;
     }
 
     main {
-        padding-top: 7rem;
+        padding-top: 2rem;
     }
     
     .profile img {
@@ -661,33 +683,29 @@ main .preview-img:hover {
 
 @media (max-width: 600px) {
     .pendidikan-container {
-        grid-template-columns: 1fr; /* 1 kolom penuh di Layar HP */
+        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 480px) {
-    .navbar {
-        height: 7rem;
-    }
-
     .navbar h1 {
         font-size: 1.4rem;
     }
-    
+
     .navbar nav ul {
-        gap: 0.75rem;
+        gap: 0.85rem;
     }
-    
+
     .profile h1 {
         font-size: 2.2rem;
     }
 
     header {
-        padding: 60px 5% 30px;
+        padding: 105px 5% 30px;
     }
 
     main {
-        padding-top: 6rem;
+        padding-top: 1rem;
     }
     
     .grid {
