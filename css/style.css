@@ -24,6 +24,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden; /* Mencegah geser horizontal berlebih */
 }
 
 main {
@@ -214,18 +215,30 @@ header {
     box-shadow: 0 8px 20px rgba(211, 84, 0, 0.5);
 }
 
-/* About Section */
-.tentang-saya {
+/* Common Section Box Styles - Presisi Tengah */
+.tentang-saya, 
+.pendidikan, 
+.skill, 
+.proyek, 
+.sertifikat {
     background: var(--white);
-    text-align: center;
-    margin: 30px;
+    margin: 30px auto; /* auto membuat box persis di tengah */
+    max-width: 1100px; /* membatasi lebar maksimal agar konsisten */
+    width: calc(100% - 40px); /* memberikan jarak samping yang seimbang */
     border-radius: 15px;
     padding: 30px 25px;
     box-shadow: var(--shadow);
+    text-align: center;
 }
 
+.pendidikan, .proyek {
+    background: var(--light);
+}
+
+/* About Section Specifics */
 .tentang-saya .container {
     max-width: 600px;
+    margin: 0 auto;
 }
 
 .tentang-saya p {
@@ -241,14 +254,6 @@ header {
 }
 
 /* Education Section */
-.pendidikan {
-    background: var(--light);
-    margin: 30px;
-    border-radius: 15px;
-    padding: 30px 25px;
-    box-shadow: var(--shadow);
-}
-
 .pendidikan-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -303,14 +308,6 @@ header {
 }
 
 /* Skills Section */
-.skill {
-    background: var(--white);
-    margin: 30px;
-    border-radius: 15px;
-    padding: 30px 25px;
-    box-shadow: var(--shadow);
-}
-
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -346,17 +343,9 @@ header {
 }
 
 /* Projects Section */
-.proyek {
-    background: var(--light);
-    margin: 30px;
-    border-radius: 15px;
-    padding: 30px 25px;
-    box-shadow: var(--shadow);
-}
-
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2.5rem;
     margin-top: 2.5rem;
 }
@@ -407,18 +396,11 @@ header {
     box-shadow: 0 6px 15px rgba(46, 204, 113, 0.4);
 }
 
-/* Certificate Section */
-.sertifikat {
-    background: var(--white);
-    margin: 30px;
-    border-radius: 15px;
-    padding: 30px 25px;
-    box-shadow: var(--shadow);
-}
-
+/* Certificate Section - Diperbaiki agar Card Tengah */
 .sertifikat-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 280px));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    justify-content: center;
     gap: 1.5rem;
     margin-top: 2.5rem;
 }
@@ -430,6 +412,9 @@ header {
     box-shadow: var(--shadow);
     transition: var(--transition);
     border: 1px solid #e0e0e0;
+    max-width: 320px;
+    margin: 0 auto; /* Menjaga tiap kartu berada di tengah jalurnya */
+    width: 100%;
 }
 
 .sertifikat-card:hover {
@@ -452,6 +437,7 @@ header {
 
 .sertifikat-info {
     padding: 1.2rem;
+    text-align: left;
 }
 
 .sertifikat-info h3 {
@@ -634,14 +620,14 @@ main .preview-img:hover {
     
     .navbar nav ul {
         margin-top: 0;
-        gap: 1rem;
-        justify-content: center; /* Mengatur item menu tepat di tengah */
+        gap: 1.2rem;
+        justify-content: center;
         padding: 0;
         width: 100%;
     }
 
     .navbar nav a {
-        font-size: 0.88rem;
+        font-size: 0.9rem;
     }
     
     header {
@@ -676,7 +662,8 @@ main .preview-img:hover {
     }
 
     .skill, .pendidikan, .tentang-saya, .proyek, .sertifikat {
-        margin: 30px 10px;
+        margin: 20px auto;
+        width: calc(100% - 30px); /* Kiri & kanan seimbang 15px */
         padding: 20px 15px;
     }
 }
@@ -690,10 +677,6 @@ main .preview-img:hover {
 @media (max-width: 480px) {
     .navbar h1 {
         font-size: 1.4rem;
-    }
-
-    .navbar nav ul {
-        gap: 0.85rem;
     }
 
     .profile h1 {
@@ -713,7 +696,7 @@ main .preview-img:hover {
     }
 
     section {
-        padding: 40px 0;
+        padding: 30px 0;
     }
 
     .project-card .btn {
@@ -721,8 +704,9 @@ main .preview-img:hover {
         font-size: 0.85rem;
     }
 
-    .skill, .sertifikat {
-        margin: 20px 5px;
-        padding: 15px 10px;
+    .skill, .pendidikan, .tentang-saya, .proyek, .sertifikat {
+        margin: 15px auto;
+        width: calc(100% - 24px); /* Memberikan ruang simetris 12px di sisi kiri dan kanan */
+        padding: 15px 12px;
     }
 }
